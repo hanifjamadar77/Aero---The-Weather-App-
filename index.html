@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aero - The Weather App</title>
+    <link rel="shortcut icon" href="clouds-and-sun.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="aero">
+            <div class="logo" onclick="weatherFn($('#city-input').val())">
+                <h1>Aero</h1>
+            </div>
+            <div class="temperature">
+                <div class="weather">
+                    <span class="temp" id="temperature"></span>
+                    <div class="flex">
+                        <span class="city" id="city-name"></span>
+                        <p id="date"></p>
+                    </div>
+                    <span class="overview"><p id="description"></p></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="countries">
+            <div class="search-city">
+                <div class="search">
+                    <div class="input">
+                        <input type="text" id="city-input" placeholder="Another Location" spellcheck="true">
+                    </div>
+                    <div class="search-logo" id="city-input-btn" onclick="weatherFn($('#city-input').val())">
+                        <img src="search-logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="recombation">
+                <h4>Birmingham</h4>
+                <h4>Manchester</h4>
+                <h4>New York</h4>
+                <h4>California</h4>
+            </div>
+            <hr>
+
+            <div class="details">
+                <h2>Weather Details</h2>
+                <div class="weather-details">
+                    <div>
+                        <h3>Cloudy</h3>
+                        <h3>Humidity</h3>
+                        <h3>Wind</h3>
+                        <h3>Pressure</h3>
+                    </div>
+                    <div class="persentage">
+                        <span id="cloud">%</span>
+                        <span id="humidity">%</span>
+                        <span id="wind-speed">km/h</span>
+                        <span id="pressure">mm</span>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </main>
+
+    <script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script src=
+"https://momentjs.com/downloads/moment.min.js">
+    </script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

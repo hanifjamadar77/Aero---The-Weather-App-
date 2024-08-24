@@ -1,0 +1,243 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Reset */
+
+:root {
+  --font-primary: "Montserrat", sans-serif;
+
+  --color-primary: #ffffff;
+  --color-primary: #c7c8cc;
+
+  --bg-primary: #000000;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: var(--font-primary);
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main {
+  height: 100vh;
+  width: 100%;
+  background:url(background.jpg);
+  display: flex;
+  flex-direction: row;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.aero {
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+}
+.logo{
+  height: 5rem;
+  width: 15rem;
+}
+.logo > h1{
+  font-size: 5rem;
+  color: lightblue;
+  transition: transform .2s;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+  }
+} 
+.countries {
+  height: 100vh;
+  width: 40%;
+  background: rgb(6 5 5 / 80%);
+  padding-left: 4rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: row;
+  height: 10rem;
+  width: 100%;
+  align-items: center;
+}
+.weather{
+  display: flex ;
+  flex-direction: row;
+  gap: 2rem;
+}
+.weather .temp {
+  font-size: 65px;
+}
+.weather .city{
+  font-size: 38px;
+}
+#date{
+  font-size: 16px;
+}
+.overview p{
+  font-size: 20px;
+}
+.weather .overview{
+    font-size: 15px;
+    display: grid;
+    place-content: center;
+}
+
+.search {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.search-logo {
+  height: 6rem;
+  width: 6rem;
+  background: rgb(10, 10, 10);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+  border-left: 1px solid rgb(247, 250, 251);
+}
+.search-logo > img{
+  height: 5rem;
+  width: 5rem;
+  background: none;
+  transition: transform .2s ease-in-out;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.input > input{
+  height: 3rem;
+  /* width: 24rem; */
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white ;
+  background: transparent;
+  /* padding: 0rem; */
+  font-size: 16px;
+  color:lightgray;
+  font-size: 18px;
+}
+
+.recombation{
+  display: flex;
+  flex-direction: column;
+  line-height: 3rem;
+}
+
+.recombation > h4{
+  cursor: pointer;
+  font-weight: 500;
+  color: gray;
+}
+.weather-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 3rem;
+}
+.weather-details h3{
+  font-weight: 500;
+  color: gray;
+}
+.details > h2{
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.persentage{
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+  line-height: 3rem;
+  font-size: 17px;
+}
+
+hr{
+  border-color: white;
+  height: 2px;
+  outline: none;
+}
+
+@media screen and (max-width: 1400px) {
+  body {
+    background-color:lightblue;
+  }
+
+  main{
+    height: fit-content;
+    width: fit-content; 
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main{
+  height: fit-content;
+  width: 100%;
+   display: flex;
+   flex-direction: column;
+  }
+  
+  .weather{
+    color: blue;
+  }
+  .countries{
+    width: 100%;
+  }
+
+  .temperature{
+    height: fit-content;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  main{
+    backdrop-filter: blur(1px);
+    height: fit-content;
+    width: fit-content;
+  }
+  .temperature {
+    height: auto;
+    width: auto;
+  }
+  .weather{
+    flex-direction: column;
+  }
+  
+  .weather .overview{
+    place-content: start;
+  }
+  .countries{
+    padding-left: 2rem;
+  }
+}
